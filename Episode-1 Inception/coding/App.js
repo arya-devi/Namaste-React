@@ -1,6 +1,11 @@
 /*
 <div id="parent">
-<div id="child">
+<div id="child1">
+<h1>Hello world from React h1</h1>
+<h2>Hello world from React h2</h2>
+
+</div>
+<div id="child2">
 <h1>Hello world from React h1</h1>
 <h2>Hello world from React h2</h2>
 
@@ -12,14 +17,16 @@ React.createElement (object) => HTML(browser understand)
 
 */
 
-const parent = React.createElement(
-  "div",
-  { id: "parent" },
-  React.createElement("div", { id: "child" }, [
+const parent = React.createElement("div", { id: "parent" }, [
+  React.createElement("div", { id: "child1" }, [
     React.createElement("h1", {}, "Hello world from React h1"),
     React.createElement("h2", {}, "Hello world from React h2"),
-  ])
-);
+  ]),
+  React.createElement("div", { id: "child2" }, [
+    React.createElement("h1", {}, "Hello world from React h1"),
+    React.createElement("h2", {}, "Hello world from React h2"),
+  ]),
+]);
 
 // const heading = React.createElement(
 //   "h1",
