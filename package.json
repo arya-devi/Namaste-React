@@ -2,7 +2,7 @@
   "name": "namastereact",
   "version": "1.0.0",
   "description": "course for react js developer",
-  "main": "index.js",
+  
   "scripts": {
     "test": "jest"
   },
@@ -27,5 +27,8 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
-  }
+  },
+  "browserlist" : [
+    "last 10 versions"
+  ]
 }
