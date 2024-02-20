@@ -25,7 +25,7 @@
 114C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\@swc\helpers\esm\_class_static_private_field_spec_get.js133527947211277123 0
 105C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\@parcel\resolver-default\lib\DefaultResolver.js133527947256821989 0
 104C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\csso\node_modules\css-tree\cjs\lexer\Lexer.cjs133527947313982065 0
-49C:\Users\aryaa\OneDrive\Desktop\NamasteReact\dist133528859287807832 1
+49C:\Users\aryaa\OneDrive\Desktop\NamasteReact\dist133529003532070115 1
 67C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\@mischnic133527947086182053 1
 93C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\@swc\helpers\src\_object_spread.mjs133527947240755680 0
 92C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\@swc\helpers\cjs\_to_primitive.cjs133527947210151169 0
@@ -43,10 +43,10 @@
 77C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\tslib\tslib.es6.mjs133527947161680346 0
 86C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\svgo\plugins\minifyStyles.js133527947199114664 0
 103C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\caniuse-lite\data\features\permissions-api.js133527947244607561 0
-51C:\Users\aryaa\OneDrive\Desktop\NamasteReact\App.js133528054252307167 0
+51C:\Users\aryaa\OneDrive\Desktop\NamasteReact\App.js133529003530844028 0
 86C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\weak-lru-cache\tests\test.js133527947115188998 0
 96C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\@parcel\events\test\Disposable.test.js133527947269822263 0
-54C:\Users\aryaa\OneDrive\Desktop\NamasteReact\index.css133526300692989121 0
+54C:\Users\aryaa\OneDrive\Desktop\NamasteReact\index.css133529002367814375 0
 82C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\domelementtype\readme.md133527947101032580 0
 88C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\type-fest\source\asyncify.d.ts133527947114946748 0
 86C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\nth-check\lib\index.d.ts.map133527947096102629 0
@@ -63,7 +63,7 @@
 127C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\@parcel\optimizer-htmlnano\node_modules\csso\lib\restructure\utils.js133527947310401066 0
 82C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\semver\functions\diff.js133527947217359233 0
 100C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\caniuse-lite\data\features\css-autofill.js133527947203177361 0
-55C:\Users\aryaa\OneDrive\Desktop\NamasteReact\index.html133528050253716117 0
+55C:\Users\aryaa\OneDrive\Desktop\NamasteReact\index.html133529000346793568 0
 76C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\@swc\types\LICENSE133527947199047886 0
 109C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\mdb_copy.1133527947206327024 0
 89C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\caniuse-lite\data\regions\BS.js133527947200738563 0
@@ -4872,7 +4872,7 @@
 79C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\@parcel\packager-wasm133527947254475551 1
 130C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\syntax\atrule\import.js133527947311653457 0
 78C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\@parcel\reporter-cli133527947305018259 1
-72C:\Users\aryaa\OneDrive\Desktop\NamasteReact\dist\index.9e4c6fd2.css.map133528859286663304 0
+72C:\Users\aryaa\OneDrive\Desktop\NamasteReact\dist\index.9e4c6fd2.css.map133529002638014852 0
 81C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\@parcel\reporter-tracer133527947263481810 1
 85C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\@parcel\runtime-browser-hmr133527947252745358 1
 88C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\@parcel\runtime-service-worker133527947249209999 1
@@ -5000,7 +5000,7 @@
 83C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\@parcel\markdown-ansi\src133527947199114664 1
 95C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\@parcel\utils\src\progress-message.js133527947321345571 0
 91C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\@parcel\utils\src\PromiseQueue.js133527947321538352 0
-71C:\Users\aryaa\OneDrive\Desktop\NamasteReact\dist\index.7826abd7.js.map133528859287795421 0
+71C:\Users\aryaa\OneDrive\Desktop\NamasteReact\dist\index.7826abd7.js.map133529003532046770 0
 97C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\@parcel\utils\src\relativeBundlePath.js133527947322221834 0
 86C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\@parcel\events\src\errors.js133527947269848108 0
 90C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\@parcel\utils\src\relativeUrl.js133527947322524349 0
@@ -5026,7 +5026,7 @@
 123C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\@parcel\transformer-react-refresh-wrap\src\helpers\.eslintrc.json133527947234342299 0
 119C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\@parcel\transformer-react-refresh-wrap\src\helpers\helpers.js133527947233130373 0
 108C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\@parcel\transformer-react-refresh-wrap\lib\helpers133527947232072022 1
-68C:\Users\aryaa\OneDrive\Desktop\NamasteReact\dist\index.9e4c6fd2.css133528859286583241 0
+68C:\Users\aryaa\OneDrive\Desktop\NamasteReact\dist\index.9e4c6fd2.css133529002637804059 0
 131C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\@parcel\transformer-react-refresh-wrap\lib\ReactRefreshWrapTransformer.js133527947233786260 0
 102C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo133527947320061586 1
 119C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\@parcel\transformer-react-refresh-wrap\lib\helpers\helpers.js133527947232369050 0
@@ -6036,5 +6036,5 @@
 71C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\.bin\svgo.ps1133527947606363177 0
 85C:\Users\aryaa\OneDrive\Desktop\NamasteReact\node_modules\.bin\update-browserslist-db133527947606416537 0
 68C:\Users\aryaa\OneDrive\Desktop\NamasteReact\dist\index.31e27888.css133528149463546548 0
-67C:\Users\aryaa\OneDrive\Desktop\NamasteReact\dist\index.7826abd7.js133528859287634185 0
-60C:\Users\aryaa\OneDrive\Desktop\NamasteReact\dist\index.html133528859287144575 0
+67C:\Users\aryaa\OneDrive\Desktop\NamasteReact\dist\index.7826abd7.js133529003531814372 0
+60C:\Users\aryaa\OneDrive\Desktop\NamasteReact\dist\index.html133529002132134916 0
