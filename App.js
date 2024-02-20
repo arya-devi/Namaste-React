@@ -15,8 +15,14 @@ console.log(heading);
 
 //jsx => React.createElement => ReactElement => JavascriptObject => HTMLElement(render)
 
-
-const jsxHeading = <h1>The JSX is converted into browser understand language 🚀</h1>; //Convert this into browser understand language that is Ecmascript pure Javascript
+const jsxHeading = (
+  <>
+    <h1 className="heading">
+      The JSX is converted into browser understand language 🚀
+    </h1>
+    <p>Paragraph</p>
+  </>
+); //Convert this into browser understand language that is Ecmascript pure Javascript
 
 console.log(jsxHeading);
 
