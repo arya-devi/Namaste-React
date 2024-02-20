@@ -4,6 +4,8 @@
   "description": "course for react js developer",
   
   "scripts": {
+    "start": "parcel index.html",
+    "build":"parcel build index.html",
     "test": "jest"
   },
   "repository": {
