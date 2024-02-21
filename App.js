@@ -6,32 +6,26 @@ const heading = React.createElement(
   { id: "heading" },
   "Namaste React 🚀"
 );
-//now we are going to convert this react element to react component
-const reactElement = (
-  <>
-    <h1 className="heading">
-      The JSX is converted into browser understand language 🚀
-    </h1>
-    <p>Paragraph</p>
-  </>
-);
+
 const ReactComponent = () => (
   <>
-    <h1 className="heading">
-      The JSX is converted into browser understand language 🚀
-    </h1>
-    <p>Paragraph</p>
+    <h1 className="heading">Header</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nam odit
+      officia iusto. Officiis, voluptatem in possimus debitis quos repellat!
+      Culpa omnis aut ipsa mollitia non, totam facilis ut enim!
+    </p>
   </>
 );
-//this is how that looks like 
 
 const HeaderComponent2 = () => (
-<h1 className="header">Namaste React by JSX Component 🚀</h1>
+  <div id="container">
+    {/* this is how we can pass a component and use it inside */}
+    <ReactComponent />
+    <h1 className="header">Footer</h1>
+  </div>
 );
-
-
-const root = ReactDOM.createRoot(document.getElementById("root")); 
-
-// to render react component we want to wrap the component inside < />
+//if we use a component inside another component like this known as component composition
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(<HeaderComponent2 />);
