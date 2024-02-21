@@ -1,19 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// React.createElement => Object => HTMLElement(render)
-
 const heading = React.createElement(
   "h1",
   { id: "heading" },
   "Namaste React 🚀"
 );
-
-console.log(heading);
-
-// JSX (Transpiled before it reaches the JS) - Parcel - Babel
-
-//jsx => React.createElement => ReactElement => JavascriptObject => HTMLElement(render)
 
 const jsxHeading = (
   <>
@@ -22,12 +14,23 @@ const jsxHeading = (
     </h1>
     <p>Paragraph</p>
   </>
-); //Convert this into browser understand language that is Ecmascript pure Javascript
+);
+//React Component
+//Class Component
+//Functional Components
 
-console.log(jsxHeading);
+//React functional Component
+//This is how we create React Component using return keyword
+const HeaderComponent = () => {
+  return <h1 className="header">Header</h1>;
+};
+//this is how we create React Component without using return keyword just wrapping into a () paranthisis
+const HeaderComponent2 = () => <h1 className="header">Header</h1>;
+
+//Both wat to create react component is valid syntax
+//React component is just a javascript function that return some jsx or react element
+//and the first letter ofreact component name is must be capital letter
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-//ReactDom will conver react element into HTML
 
 root.render(jsxHeading);
