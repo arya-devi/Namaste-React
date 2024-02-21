@@ -6,8 +6,8 @@ const heading = React.createElement(
   { id: "heading" },
   "Namaste React 🚀"
 );
-
-const jsxHeading = (
+//now we are going to convert this react element to react component
+const reactElement = (
   <>
     <h1 className="heading">
       The JSX is converted into browser understand language 🚀
@@ -15,22 +15,23 @@ const jsxHeading = (
     <p>Paragraph</p>
   </>
 );
-//React Component
-//Class Component
-//Functional Components
+const ReactComponent = () => (
+  <>
+    <h1 className="heading">
+      The JSX is converted into browser understand language 🚀
+    </h1>
+    <p>Paragraph</p>
+  </>
+);
+//this is how that looks like 
 
-//React functional Component
-//This is how we create React Component using return keyword
-const HeaderComponent = () => {
-  return <h1 className="header">Header</h1>;
-};
-//this is how we create React Component without using return keyword just wrapping into a () paranthisis
-const HeaderComponent2 = () => <h1 className="header">Header</h1>;
+const HeaderComponent2 = () => (
+<h1 className="header">Namaste React by JSX Component 🚀</h1>
+);
 
-//Both wat to create react component is valid syntax
-//React component is just a javascript function that return some jsx or react element
-//and the first letter ofreact component name is must be capital letter
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("root")); 
 
-root.render(jsxHeading);
+// to render react component we want to wrap the component inside < />
+
+root.render(<HeaderComponent2 />);
