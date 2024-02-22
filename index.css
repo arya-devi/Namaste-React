@@ -5,7 +5,7 @@ body{
     box-sizing: border-box;
 }
 .body {
-    width: 70%;
+    width: 90%;
     margin: auto;
 }
 .header {
@@ -33,6 +33,7 @@ body{
     background: #00000010;
     cursor: pointer;
     border-radius: 5px;
+    margin-bottom: 15px;
 }
 .card-container img{
     width: 250px;
@@ -45,7 +46,7 @@ body{
    padding: 10px;
    color: gray;
 }
-.card-details span{
+.card-details > span{
   color: rgb(255, 255, 255);
   font-weight: bolder;
   position: relative;
@@ -61,35 +62,51 @@ body{
 .card-details .right i {
     color: rgb(240, 175, 11);
 }
-.card-details .right h4{
-    margin-right:8px ;
-    margin-bottom:10px;
-    margin-top: 0;
+.card-details .right .rating span{
     color: rgb(100, 100, 100);
+    margin: 0;
+    margin-right: 8px;
+}
+.card-details .right .rating {
+    display: flex;
+    gap: 2px;
 }
 .card-details .right h2{
     margin: 0;
+    font-size: 20px;
 }
 .card-details .left{
-    color: rgba(107, 106, 106, 0.753);
+    color: rgba(107, 106, 106, 0.699);
+    margin-top: 5px;
 }
 .card-details .left h3{
     margin: 0;
+    font-size: 14px;
 }
 p{
     margin: 0;
 }
 .card-details .left p{
-    font-size: 0.9rem;
+    font-size: 12px;
     margin-bottom: 10px;
 }
 .card-details .left h4{
     margin: 10 0px;
+    font-size: 14px;
 }
 .res-container{
     display: flex;
     gap: 10px;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
+.food-type{
+    display: flex;
+    justify-content: space-between;
+}
+.food-type i{
+    margin-right: 10px;
+    font-size: 15px;
+}
+
 
