@@ -1,52 +1,56 @@
 :root {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-body{
-    box-sizing: border-box;
+body {
+  box-sizing: border-box;
 }
 .body {
-    width: 90%;
-    margin: auto;
+  width: 80%;
+  margin: auto;
 }
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid rgba(0, 0, 0, 0.103);
+  box-shadow: 10px 5px 5px rgba(25, 24, 24, 0.092);
+  
 }
 .logo img {
   width: 100px;
   padding-left: 40px;
-  
 }
 .nav-items ul {
   display: flex;
 }
-.nav-items  ul  li {
+.nav-items ul li {
   list-style: none;
   padding-right: 40px;
+  font-size: 0.9rem;
 }
-.card-container{
-    width: 250px;
-    height: 100%;
-    padding: 5px;
-    background: #00000010;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-bottom: 15px;
+.card-container {
+  width: 250px;
+  height: 100%;
+  padding: 25px;
+
+  cursor: pointer;
+  border-radius: 25px;
+  margin-bottom: 15px;
+  transition: transform 0.1s;
 }
-.card-container img{
-    width: 250px;
-    border-radius: 5px;
+.card-container img {
+  width: 250px;
+  border-radius: 15px;
 }
-.card-container:hover{
-    border: 2px solid rgba(0, 0, 0, 0.13);
+.card-container:hover {
+  background: #00000013;
+
+  transform: scale(0.9);
 }
-.search{
-   padding: 10px;
-   color: gray;
+.search {
+  padding: 10px;
+  color: gray;
 }
-.card-details > span{
+.card-details > span {
   color: rgb(255, 255, 255);
   font-weight: bolder;
   position: relative;
@@ -54,59 +58,60 @@ body{
   left: 10px;
   letter-spacing: 3px;
 }
-.card-details .right{
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+.card-details .right {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 .card-details .right i {
-    color: rgb(240, 175, 11);
+  color: rgb(240, 175, 11);
 }
-.card-details .right .rating span{
-    color: rgb(100, 100, 100);
-    margin: 0;
-    margin-right: 8px;
+.card-details .right .rating span {
+  color: rgb(100, 100, 100);
+  margin: 0;
+  margin-right: 8px;
 }
 .card-details .right .rating {
-    display: flex;
-    gap: 2px;
+  display: flex;
+  gap: 2px;
 }
-.card-details .right h2{
-    margin: 0;
-    font-size: 20px;
+.card-details .right h2 {
+  margin: 0;
+  font-size: 20px;
 }
-.card-details .left{
-    color: rgba(107, 106, 106, 0.699);
-    margin-top: 5px;
+.card-details .left {
+  color: rgba(107, 106, 106, 0.699);
+  margin-top: 5px;
 }
-.card-details .left h3{
-    margin: 0;
-    font-size: 14px;
+.card-details .left i {
+  color: rgb(26, 140, 144);
 }
-p{
-    margin: 0;
+.card-details .left h3 {
+  margin: 0;
+  font-size: 14px;
 }
-.card-details .left p{
-    font-size: 12px;
-    margin-bottom: 10px;
+p {
+  margin: 0;
 }
-.card-details .left h4{
-    margin: 10 0px;
-    font-size: 14px;
+.card-details .left p {
+  font-size: 12px;
+  margin-bottom: 10px;
 }
-.res-container{
-    display: flex;
-    gap: 10px;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+.card-details .left h4 {
+  margin: 10 0px;
+  font-size: 14px;
 }
-.food-type{
-    display: flex;
-    justify-content: space-between;
+.res-container {
+  display: flex;
+  gap: 10px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
-.food-type i{
-    margin-right: 10px;
-    font-size: 15px;
+.food-type {
+  display: flex;
+  justify-content: space-between;
 }
-
-
+.food-type i {
+  margin-right: 10px;
+  font-size: 15px;
+}

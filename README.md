@@ -18,3 +18,21 @@
 - HTTPs 
 - Tree Shaking - remove unused code
 - Different dev and production bundles
+
+
+/*Header
+ * - Logo
+ * - Nav-Links
+ * Body
+ * - search
+ * - Restorent item container
+ *     - card container
+ *         - img
+ *         -name of res
+ *         -type
+ *         -rating
+ *         -delivery time
+ * Footer
+ *  - copy rights
+ *  - links
+ */
