@@ -35,7 +35,7 @@ body {
   cursor: pointer;
   border-radius: 25px;
   margin-bottom: 15px;
-  transition: transform 0.1s;
+  transition: transform 0.6s;
 }
 .card-container img {
   width: 250px;
@@ -46,9 +46,17 @@ body {
 
   transform: scale(0.9);
 }
-.search {
+.filter .filter-btn {
   padding: 10px;
-  color: gray;
+  color: rgb(73, 73, 73);
+  margin: 20px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+.filter .filter-btn:hover{
+    color: rgb(255, 255, 255);
+    background: #00000094;
 }
 .card-details > span {
   color: rgb(255, 255, 255);

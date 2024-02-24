@@ -1,38 +1,65 @@
-# Namasthe React 🚀
+# Namaste React 🚀
+
 
 # Parcel
 - Dev Build
 - Local Server
-- HMR - Hot Module Replacement
+- HMR = Hot Module Replacement
 - File Watching Algorithm - written in C++
 - Caching - Faster Builds
 - Image Optimization
 - Minification
-- Building
+- Bundling
 - Compress
 - Consistent Hashing
 - Code Splitting
-- Differential Building - supports older browsers
+- Differential Bundling - support older browsers
 - Diagnostic
 - Error Handling
-- HTTPs 
+- HTTPs
 - Tree Shaking - remove unused code
-- Different dev and production bundles
+- Different dev and prod bundles
 
 
-/*Header
- * - Logo
- * - Nav-Links
+
+# Namaste Food
+
+
+/**
+ * Header
+ *  - Logo
+ *  - Nav Items
  * Body
- * - search
- * - Restorent item container
- *     - card container
- *         - img
- *         -name of res
- *         -type
- *         -rating
- *         -delivery time
+ *  - Search
+ *  - RestaurantContainer
+ *    - RestaurantCard
+ *      - Img
+ *      - Name of Res, Star Rating, cuisine, delery tie
  * Footer
- *  - copy rights
- *  - links
+ *  - Copyright
+ *  - Links
+ *  - Address
+ *  - Contact
  */
+
+
+
+ Two types of Export/Import
+
+
+- Default Export/Import
+
+export default Component;
+import Component from "path";
+
+
+- Named Export/Import
+
+export const Component;
+import {Component} from "path";
+
+
+# React Hooks
+ (Normal JS utility functions)
+- useState() - Superpowerful State Variables in react
+- useEffect()
