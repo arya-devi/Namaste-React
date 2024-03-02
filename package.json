@@ -2,10 +2,9 @@
   "name": "namastereact",
   "version": "1.0.0",
   "description": "course for react js developer",
-  
   "scripts": {
     "start": "parcel index.html",
-    "build":"parcel build index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {
@@ -28,9 +27,10 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.1"
   },
-  "browserlist" : [
+  "browserlist": [
     "last 10 versions"
   ]
 }
