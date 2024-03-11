@@ -9,6 +9,7 @@ import Help from "./components/Help";
 import Error from "./components/Error";
 import Search from "./components/Search";
 import Footer from "./components/Footer";
+import RestaurentMenu from "./components/RestaurantMenu";
 
 const AppLayout = () => {
   return (
@@ -44,6 +45,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/search",
         element: <Search />,
+      },
+      {
+        path: "/restaurant/:id",
+        element: <RestaurentMenu />,
       },
     ]
   },

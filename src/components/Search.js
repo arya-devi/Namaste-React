@@ -13,7 +13,7 @@ const Search = () => {
   }, []);
   const fetchData = async () => {
     const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=9.9816358&lng=76.2998842&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=8.5241391&lng=76.9366376&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
 
     const json = await data.json();
@@ -21,8 +21,8 @@ const Search = () => {
       json?.data?.cards[0]?.card?.card?.imageGridCards?.info;
     setListOfPopularCuisines(PopularCuisines);
     setFilteredCuisines(PopularCuisines);
-    console.log(json);
-    console.log(PopularCuisines);
+    // console.log(json);
+    // console.log(PopularCuisines);
     const restaurants =
       json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
     console.log(restaurants);

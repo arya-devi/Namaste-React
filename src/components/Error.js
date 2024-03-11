@@ -9,7 +9,7 @@ const Error = () => {
       <h1>
         {router.status} {router.statusText} ❌
       </h1>
-      <h2>{router.error.message}</h2>
+      {/* <h2>{router.error.message}</h2> */}
     </div>
   );
 };

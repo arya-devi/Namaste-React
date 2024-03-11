@@ -5,7 +5,7 @@ const Footer = () => {
       <div className="footer-main">
         <div className="logo-container">
           <div className="img-container">
-            <i class="bx bxs-bowl-hot bx-tada"></i>
+            <i className="bx bxs-bowl-hot bx-tada"></i>
             <img src={ LOGO_URL } alt="" />
           </div>
           <h5>© 2023 Bundl Technologies Pvt. Ltd</h5>

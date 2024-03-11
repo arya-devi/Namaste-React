@@ -3,7 +3,7 @@
 }
 body {
   box-sizing: border-box;
-  margin: 0;
+  margin: 0px;
 }
 .body {
   width: 80%;
@@ -15,45 +15,30 @@ body {
   align-items: center;
   box-shadow: 10px 5px 5px rgba(25, 24, 24, 0.092);
 }
-.search {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.search input {
-  border: none;
-  border-radius: 6px;
-  outline: none;
-  border: 1px solid rgba(0, 0, 0, 0.983);
-}
-.search i {
-  position: relative;
-  right: 20px;
-
-  cursor: pointer;
-}
-.search i:hover {
-  color: rgb(255, 136, 0);
-}
 .search-res {
-  margin-top: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #7c7a7e;
 }
 .search-res input {
   color: #7c7a7e;
   border: 1px solid #ff7300;
   outline: none;
+  text-align: center;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
-  text-align: center;
-  height: 26px;
+  height: 24px;
+  border-right: none;
 }
 .search-res button {
   background: rgb(255, 136, 0);
   color: white;
   border: none;
-  padding: 7px;
+  height: 28px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+  cursor: pointer;
 }
 .menu-item {
   display: none;
@@ -75,11 +60,11 @@ body {
 .nav-items ul {
   display: flex;
   gap: 40px;
+  align-items: center;
 }
 .nav-items ul li {
   list-style: none;
   font-size: 0.9rem;
-  
 }
 .no-underline {
   text-decoration: none;
@@ -98,12 +83,11 @@ body {
   transition: transform 0.6s;
 }
 .card-container img {
-  width: 250px;
+  width: 100%;
   border-radius: 15px;
 }
 .card-container:hover {
-  background: #00000013;
-
+  /* background: #00000013; */
   transform: scale(0.9);
 }
 .filter .filter-btn {
@@ -155,7 +139,7 @@ body {
 }
 .card-details .right h2 {
   margin: 0;
-  font-size: 20px;
+  font-size: 17px;
 }
 .card-details .left {
   color: rgba(107, 106, 106, 0.699);
@@ -181,7 +165,7 @@ p {
 }
 .res-container {
   display: flex;
-  gap: 10px;
+  /* gap: 10px; */
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
@@ -325,20 +309,20 @@ p {
 }
 .footer-container {
   width: 100%;
-  margin: auto;
   background: #000;
   color: white;
-  flex-wrap: wrap;
   margin-top: 30px;
 }
 .footer-main {
   width: 70%;
   margin: auto;
   display: flex;
-  gap: 8rem;
+  gap: 8px;
 }
 .logo-container {
   display: block;
+  width: 25%;
+  margin-right: 30px;
 }
 .img-container {
   display: flex;
@@ -357,20 +341,206 @@ p {
 }
 .contactus-container {
   display: block;
+  width: 25%;
 }
-h6 {
+.company-container {
+  width: 25%;
+}
+.deliverto-container {
+  width: 25%;
+}
+.footer-main h6 {
   color: rgb(138, 136, 136);
   margin-top: 30px;
+  margin-bottom: 0;
 }
-h5 {
+.footer-main h5 {
   margin-top: 50px;
 }
-h2 {
+.footer-main h2 {
   margin-top: 50px;
+}
+.menu-container {
+  width: 50%;
+  margin: auto;
+  padding: 15px;
+}
+.res-namecontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px dashed rgba(128, 128, 128, 0.74);
+  padding: 20px 0;
+}
+.res-place h5 {
+  color: grey;
+}
+.res-name h2 {
+  letter-spacing: 2px;
+}
+.res-name p {
+  color: grey;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+.res-rating {
+  border: 1px solid;
+  width: 80px;
+  height: 75px;
+  border-radius: 5px;
+  display: block;
+  border-color: #0000002c;
+}
+.res-rating .rate-star {
+  width: 70%;
+  height: 50%;
+  margin: auto;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.425);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: #1f8537;
+  font-size: larger;
+}
+.res-rating .rating h5 {
+  margin: 9px 0;
+  font-size: 11px;
+  text-align: center;
+  color: rgba(128, 128, 128, 0.836);
+}
+.time-and-cost {
+  display: flex;
+  gap: 14px;
+}
+.time-and-cost .time h5 {
+  font-weight: bolder;
+}
+.res-offers {
+  border: 1px solid rgb(213, 210, 210);
+  width: 20%;
+  display: block;
+  text-align: center;
+  padding: 5px 2px;
+  border-radius: 6px;
+}
+.res-offers h5 {
+  margin: 4px;
+  color: rgba(128, 128, 128, 0.664);
+  font-size: 8px;
+}
+.res-offers h4 {
+  margin: 4px;
+  color: rgba(87, 87, 87, 0.818);
+  font-size: 12px;
+}
+.offer-card {
+  display: flex;
+  gap: 10px;
+}
+.menu-details .veg-only {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.menu-details .veg-only h4 {
+  color: rgba(0, 0, 0, 0.603);
+}
+.menu-details .veg-only-btn {
+  margin-top: 6px;
+  font-size: 23px;
+  color: grey;
+  cursor: pointer;
+}
+.menu-details .veg-only-btn.active {
+  color: #259c40;
+}
+.food-list {
+  border-top: 1px solid rgba(128, 128, 128, 0.205);
+}
+.recommended {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.recommended i {
+  font-size: 30px;
+  cursor: pointer;
+}
+.recommended h3{
+  color: rgb(144, 144, 144);
+}
+.food-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom:1px solid rgba(128, 128, 128, 0.205);
+}
+.food-name span i {
+  margin-top: 60px;
+}
+.food-name h6 {
+  position: relative;
+  bottom: 40px;
+  left: 20px;
+  color: #ff7300;
+}
+.food-name h4 {
+  position: relative;
+  bottom: 50px;
+  color: rgb(64, 64, 64);
+}
+.food-name h5 {
+  position: relative;
+  bottom: 60px;
+  color: rgb(128, 128, 128);
+}
+.food-name p {
+  position: relative;
+  bottom: 70px;
+  color: rgba(128, 128, 128, 0.86);
+  font-size: small;
+}
+.food-img img {
+  width: 130px;
+  height: 90px;
+  border-radius: 10px;
+  
+}
+.food-img button {
+  position: absolute;
+  top: 100%;
+  /* left: 100%; */
+  transform: translate(-50%, -50%);
+  color: rgb(240, 134, 14);
+  background-color: white;
+  border: none;
+  border: .9px dashed;
+  border-radius: 5px;
+  padding: 8px 30px;
+  cursor: pointer;
+  font-weight: bolder;
+  margin-left: -65px;
+}
+.food-img button:hover {
+  box-shadow: rgb(217, 159, 42) 0px 50px 100px -20px,
+    rgba(235, 122, 8, 0.476) 0px 30px 60px -30px,
+    rgba(235, 145, 10, 0.558) 0px -2px 6px 0px inset;
+}
+
+.food-img {
+  position: relative;
 }
 @media (max-width: 739px) {
   .header {
     height: 50px;
+  }
+  .menu-container {
+    width: 70%;
+  }
+  .footer-main{
+    width: 90%;
   }
 }
 @media (max-width: 670px) {
@@ -385,6 +555,9 @@ h2 {
     z-index: 1;
     padding: 10px 20px;
     text-align: center;
+  }
+  .no-underline {
+    color: #969696;
   }
   .nav-items ul {
     display: block;
@@ -409,14 +582,23 @@ h2 {
     font-size: 20px;
     margin-right: 20px;
   }
+  .footer-main{
+    width: 98%;
+  }
 }
 @media (max-width: 560px) {
   .menu-item {
     display: block;
     font-size: 20px;
   }
+  .menu-container {
+    width: 90%;
+  }
   .nav-items {
     left: 150px;
+  }
+  .footer-main{
+    display: block;
   }
 }
 @media (max-width: 526px) {
