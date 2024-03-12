@@ -12,25 +12,16 @@ const RestaurentMenu = () => {
   const [categories, setCategories] = useState([]);
 
   const findCategory = (index) => {
+    setArrowDown((prev) => !prev);
     const removeIndex = categories.indexOf(index);
     categories.includes(index)
-      ? categories.splice(removeIndex, 1) && setArrowDown(true)
-      : categories.push(index) && setArrowDown(false);
+      ? categories.splice(removeIndex, 1)
+      : categories.push(index);
   };
 
   useEffect(() => {
     fetchData();
   }, []);
-  useEffect(() => {
-    if (vegOnly === true) {
-      const isVeg = filteredMenu.filter(
-        (item) => item?.card?.info?.itemAttribute?.vegClassifier === "VEG"
-      );
-      setResMenu(isVeg);
-    } else {
-      setResMenu(filteredMenu);
-    }
-  }, [vegOnly]);
 
   const params = useParams();
   const fetchData = async () => {
@@ -70,7 +61,7 @@ const RestaurentMenu = () => {
   const offers =
     resInfo?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.offers;
 
-  console.log(offers);
+  // console.log(offers);
 
   return (
     <div className="menu-container">
@@ -125,28 +116,23 @@ const RestaurentMenu = () => {
       <div className="menu-details">
         <div className="veg-only">
           <h4>Veg only</h4>
+          {/* {vegOnly ? resMenu.length + "items":  <h4>Veg only</h4>} */}
           <div className={`veg-only-btn ${vegOnly ? "active" : ""}`}>
             <i
-              onClick={() => setVegOnly((falsy) => !falsy)}
+              onClick={() => setVegOnly((prev) => !prev)}
               className="bx bx-food-tag"
             ></i>
           </div>
         </div>
-        {resMenu.map((category, index) => (
-          <div key={index} className="food-list">
-            <div onClick={() => findCategory(index)} className="recommended">
-              <h3>
-                {category.card.card.title} (
-                {category.card.card.itemCards.length})
-              </h3>
-              <i
-                className={
-                  categories.includes(index) ? "bx bx-chevron-down" : "bx bx-chevron-up"
-                }
-              ></i>
-            </div>
-            {categories.includes(index)
-              ? category?.card?.card?.itemCards?.map((item) => (
+
+        {vegOnly
+          ? resMenu.map((item) =>
+              item.card?.card?.itemCards
+                .filter(
+                  (item) =>
+                    item.card?.info?.itemAttribute?.vegClassifier === "VEG"
+                )
+                .map((item) => (
                   <div key={item?.card?.info?.id} className="food-details">
                     <div className="food-name">
                       <span>
@@ -198,9 +184,84 @@ const RestaurentMenu = () => {
                     </div>
                   </div>
                 ))
-              : null}
-          </div>
-        ))}
+            )
+          : resMenu.map((category, index) => (
+              <div key={index} className="food-list">
+                <div
+                  onClick={() => findCategory(index)}
+                  className="recommended"
+                >
+                  <h3>
+                    {category.card.card.title} (
+                    {category.card.card.itemCards.length})
+                  </h3>
+                  <i
+                    className={
+                      categories.includes(index)
+                        ? "bx bx-chevron-up"
+                        : "bx bx-chevron-down"
+                    }
+                  ></i>
+                </div>
+                {categories.includes(index)
+                  ? category?.card?.card?.itemCards?.map((item) => (
+                      <div key={item?.card?.info?.id} className="food-details">
+                        <div className="food-name">
+                          <span>
+                            {" "}
+                            <i
+                              style={
+                                item?.card?.info?.itemAttribute
+                                  .vegClassifier === "VEG"
+                                  ? { color: "green" }
+                                  : { color: "brown" }
+                              }
+                              className="bx bx-food-tag"
+                            ></i>
+                          </span>
+
+                          <h6>
+                            <div className="food-tag">
+                              <i
+                                style={
+                                  item?.card?.info?.ribbon.text
+                                    ? { color: "#ff7300" }
+                                    : { color: "white" }
+                                }
+                                className="bx bxs-star"
+                              ></i>
+                              {item?.card?.info?.ribbon.text}
+                            </div>
+                          </h6>
+                          <h4>{item?.card?.info?.name}</h4>
+                          <h5>
+                            ₹{" "}
+                            {item?.card?.info?.price / 100 ||
+                              item?.card?.info?.defaultPrice / 100}
+                          </h5>
+                          <p>
+                            {item?.card?.info?.description?.length > 50
+                              ? item?.card?.info?.description
+                                  .split(" ")
+                                  .slice(0, 10)
+                                  .join(" ") + "..."
+                              : item?.card?.info?.description}
+                          </p>
+                        </div>
+                        <div className="food-img">
+                          {item?.card?.info?.imageId && (
+                            <img
+                              src={CDN_URL + item?.card?.info?.imageId}
+                              alt=""
+                            />
+                          )}
+                          <button>ADD</button>
+                        </div>
+                      </div>
+                    ))
+                  : null}
+              </div>
+            ))}
       </div>
     </div>
   );
