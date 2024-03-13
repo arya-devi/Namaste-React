@@ -4,21 +4,37 @@ class UserClass extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      count1: 0,
-      count2: 1,
+      count: 0,
     };
   }
 
   render() {
     const { name, location, email } = this.props;
-    const { count1, count2 } = this.state;
+    const { count } = this.state;
     return (
       <div className="user-card">
         <h1>{name}</h1>
         <h2>{location}</h2>
         <h3>{email}</h3>
-        <h1>count:{count1}</h1>
-        <h1>count:{count2}</h1>
+        <h1>count:{count}</h1>
+        <button
+          onClick={() => {
+            this.setState({
+              count: this.state.count - 1,
+            });
+          }}
+        >
+          decrement
+        </button>
+        <button
+          onClick={() => {
+            this.setState({
+              count: this.state.count + 1,
+            });
+          }}
+        >
+          Increment
+        </button>
       </div>
     );
   }
