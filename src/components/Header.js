@@ -23,14 +23,14 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link to={"/offers"}className="no-underline">
+            <Link to={"/help"}className="no-underline">
               {" "}
-              <i className="bx bxs-offer"></i> Offers
+              <i class='bx bxs-log-in-circle' ></i> About 
             </Link>
           </li>
           <li>
-            <Link to={"/help"}className="no-underline">
-              <i className="bx bxs-phone"></i> Help
+            <Link to={"/offers"}className="no-underline">
+            <i className="bx bxs-offer"></i>Offers
             </Link>
           </li>
           <li>

@@ -532,6 +532,18 @@ p {
 .food-img {
   position: relative;
 }
+.user-card{
+  padding: 15px 15px;
+  border-radius: 6px;
+  border: 1px dashed rgba(128, 128, 128, 0.801);
+}
+.user-details{
+  padding: 15px;
+  margin: 15px;
+  border-radius: 6px;
+  background: #66666939;
+  color: #545458;
+}
 @media (max-width: 739px) {
   .header {
     height: 50px;
