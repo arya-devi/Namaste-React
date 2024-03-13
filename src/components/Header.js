@@ -25,7 +25,7 @@ const Header = () => {
           <li>
             <Link to={"/help"}className="no-underline">
               {" "}
-              <i class='bx bxs-log-in-circle' ></i> About 
+              <i className='bx bxs-log-in-circle' ></i> About 
             </Link>
           </li>
           <li>

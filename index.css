@@ -468,14 +468,14 @@ p {
   font-size: 30px;
   cursor: pointer;
 }
-.recommended h3{
+.recommended h3 {
   color: rgb(144, 144, 144);
 }
 .food-details {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom:1px solid rgba(128, 128, 128, 0.205);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.205);
 }
 .food-name span i {
   margin-top: 60px;
@@ -506,7 +506,6 @@ p {
   width: 130px;
   height: 90px;
   border-radius: 10px;
-  
 }
 .food-img button {
   position: absolute;
@@ -516,7 +515,7 @@ p {
   color: rgb(240, 134, 14);
   background-color: white;
   border: none;
-  border: .9px dashed;
+  border: 0.9px dashed;
   border-radius: 5px;
   padding: 8px 30px;
   cursor: pointer;
@@ -532,12 +531,12 @@ p {
 .food-img {
   position: relative;
 }
-.user-card{
+.user-card {
   padding: 15px 15px;
   border-radius: 6px;
   border: 1px dashed rgba(128, 128, 128, 0.801);
 }
-.user-details{
+.user-details {
   padding: 15px;
   margin: 15px;
   border-radius: 6px;
@@ -551,7 +550,7 @@ p {
   .menu-container {
     width: 70%;
   }
-  .footer-main{
+  .footer-main {
     width: 90%;
   }
 }
@@ -594,7 +593,7 @@ p {
     font-size: 20px;
     margin-right: 20px;
   }
-  .footer-main{
+  .footer-main {
     width: 98%;
   }
 }
@@ -609,7 +608,7 @@ p {
   .nav-items {
     left: 150px;
   }
-  .footer-main{
+  .footer-main {
     display: block;
   }
 }
