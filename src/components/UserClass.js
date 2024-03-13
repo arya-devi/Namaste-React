@@ -1,3 +1,5 @@
+//This is the child component
+
 import React from "react";
 
 class UserClass extends React.Component {
@@ -6,9 +8,13 @@ class UserClass extends React.Component {
     this.state = {
       count: 0,
     };
+    console.log("child constructor"); //when a class component load at first this constructor is called
   }
-
+  componentDidMount() {
+    console.log("child componentDidMount"); //The componentdidMount helps to make API calls.after render method this componentdidMount will be called
+  }
   render() {
+    console.log("child render"); //once the constructor is called then the render is called
     const { name, location, email } = this.props;
     const { count } = this.state;
     return (
