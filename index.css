@@ -543,6 +543,15 @@ p {
   background: #66666939;
   color: #545458;
 }
+.user-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.user-card img {
+  width: 100px;
+  border-radius: 50%;
+}
 @media (max-width: 739px) {
   .header {
     height: 50px;
