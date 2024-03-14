@@ -1,4 +1,3 @@
-import { json } from "body-parser";
 import React from "react";
 
 class UserClass extends React.Component {
@@ -12,7 +11,18 @@ class UserClass extends React.Component {
         bio: "nop",
       },
     };
+    console.log("constructor");
   }
+  /**
+   *  --- Mounting ---
+   *
+   *  Constructor (dummy data)
+   *  Render (Dummy data)
+   *       <HTML Dummy >
+   *  Component did mount
+   *       <Api Call>
+   *       this.setState -> State Variable is updated
+   */
   async componentDidMount() {
     const data = await fetch("https://api.github.com/users/arya-devi");
     const json = await data.json();
@@ -20,9 +30,25 @@ class UserClass extends React.Component {
     this.setState({
       userInfo: json,
     });
+    console.log(" componentDidMount");
+  }
+  /**      --- Update ---
+   *       render (API DATA)
+   *       <HTML Api data.
+   *       ComponentDidUpdate
+   */
+  componentDidUpdate() {
+    console.log("componentDidUpdate");
+  }
+  /**            --- UnMounting ---
+   *    when the component changes the Unmounting will work
+   */
+  componentWillUnmount() {
+    console.log("componentWillUnmount"); //This will log when the component will change
   }
 
   render() {
+    console.log("rendering");
     const { name, location, avatar_url, bio } = this.state.userInfo;
 
     return (
@@ -39,4 +65,5 @@ class UserClass extends React.Component {
     );
   }
 }
+
 export default UserClass;

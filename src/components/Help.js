@@ -5,7 +5,6 @@ class Help extends React.Component {
   constructor() {
     super();
   }
-  componentDidMount() {}
   render() {
     return (
       <div className="user-details">
