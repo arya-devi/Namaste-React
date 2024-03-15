@@ -26,7 +26,7 @@ const Body = () => {
     // console.log(restaurants);
   };
 
-  return listOfRestaurant.length === 0 ? (
+  return listOfRestaurant.length === 0 && !search ? (
     <Shimmer />
   ) : (
     <div className="body">
@@ -35,14 +35,13 @@ const Body = () => {
           <input
             type="text"
             value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") {
-                const filteredList = filterRestaurant.filter((res) =>
-                  res.info.name.toLowerCase().includes(search.toLowerCase())
-                );
-                setListOfRestaurants(filteredList);
-              }
+            onChange={(e) => {
+              setSearch(e.target.value);
+
+              const filteredList = filterRestaurant.filter((res) =>
+                res.info.name.toLowerCase().includes(search.toLowerCase())
+              );
+              setListOfRestaurants(filteredList);
             }}
           />
           <button
@@ -53,7 +52,7 @@ const Body = () => {
               setListOfRestaurants(filteredList);
             }}
           >
-            click
+            Search
           </button>
         </div>
         <button
@@ -102,10 +101,19 @@ const Body = () => {
         </button>
       </div>
       <div className="res-container">
-        {listOfRestaurant?.map((restaurant) => (
-          <Link style={{ textDecoration: "none", color: "inherit" }} to={"/restaurant/" + restaurant.info.id} key={restaurant.info.id}><RestaurantCard  resData={restaurant} /></Link>
-         
-        ))}
+        {listOfRestaurant.length === 0 ? (
+          <h1>no such restaurants</h1>
+        ) : (
+          listOfRestaurant?.map((restaurant) => (
+            <Link
+              style={{ textDecoration: "none", color: "inherit" }}
+              to={"/restaurant/" + restaurant.info.id}
+              key={restaurant.info.id}
+            >
+              <RestaurantCard resData={restaurant} />
+            </Link>
+          ))
+        )}
       </div>
     </div>
   );

@@ -2,47 +2,32 @@ import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { CDN_URL } from "../utils/constants";
 import { useParams } from "react-router-dom";
+import useRestaurantData from "../utils/useRestaurantMenu";
+import MenuCard from "./MenuCard";
+import MenuCategory from "./MenuCategory";
 
 const RestaurentMenu = () => {
   const [vegOnly, setVegOnly] = useState(false);
-  const [arrowDown, setArrowDown] = useState(false);
-  const [resInfo, setResInfo] = useState(null);
   const [resMenu, setResMenu] = useState([]);
   const [filteredMenu, setFilteredMenu] = useState([]);
-  const [categories, setCategories] = useState([]);
 
-  const findCategory = (index) => {
-    setArrowDown((prev) => !prev);
-    const removeIndex = categories.indexOf(index);
-    categories.includes(index)
-      ? categories.splice(removeIndex, 1)
-      : categories.push(index);
-  };
+  const { id } = useParams();
+  const resInfo = useRestaurantData(id);
 
   useEffect(() => {
-    fetchData();
-  }, []);
+    if (resInfo) {
+      const totalData =
+        resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
+      const totalMenu = totalData.filter((item) => item?.card?.card?.itemCards);
 
-  const params = useParams();
-  const fetchData = async () => {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=8.490872999999999&lng=76.9527483&restaurantId=" +
-        params.id
-    );
-    const json = await data.json();
-    console.log(json);
-    setResInfo(json.data);
+      setResMenu(totalMenu);
+      setFilteredMenu(totalMenu);
+      console.log(totalMenu);
 
-    const totalData =
-      json.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
-    const totalMenu = totalData.filter((item) => item?.card?.card?.itemCards);
+      console.log(resMenu);
+    }
+  }, [resInfo]);
 
-    setResMenu(totalMenu);
-    setFilteredMenu(totalMenu);
-    console.log(totalMenu);
-
-    console.log(resMenu);
-  };
   if (resInfo === null) {
     return <Shimmer />;
   }
@@ -126,141 +111,13 @@ const RestaurentMenu = () => {
         </div>
 
         {vegOnly
-          ? resMenu.map((item) =>
-              item.card?.card?.itemCards
-                .filter(
-                  (item) =>
-                    item.card?.info?.itemAttribute?.vegClassifier === "VEG"
-                )
-                .map((item) => (
-                  <div key={item?.card?.info?.id} className="food-details">
-                    <div className="food-name">
-                      <span>
-                        {" "}
-                        <i
-                          style={
-                            item?.card?.info?.itemAttribute.vegClassifier ===
-                            "VEG"
-                              ? { color: "green" }
-                              : { color: "brown" }
-                          }
-                          className="bx bx-food-tag"
-                        ></i>
-                      </span>
-
-                      <h6>
-                        <div className="food-tag">
-                          <i
-                            style={
-                              item?.card?.info?.ribbon.text
-                                ? { color: "#ff7300" }
-                                : { color: "white" }
-                            }
-                            className="bx bxs-star"
-                          ></i>
-                          {item?.card?.info?.ribbon.text}
-                        </div>
-                      </h6>
-                      <h4>{item?.card?.info?.name}</h4>
-                      <h5>
-                        ₹{" "}
-                        {item?.card?.info?.price / 100 ||
-                          item?.card?.info?.defaultPrice / 100}
-                      </h5>
-                      <p>
-                        {item?.card?.info?.description?.length > 50
-                          ? item?.card?.info?.description
-                              .split(" ")
-                              .slice(0, 10)
-                              .join(" ") + "..."
-                          : item?.card?.info?.description}
-                      </p>
-                    </div>
-                    <div className="food-img">
-                      {item?.card?.info?.imageId && (
-                        <img src={CDN_URL + item?.card?.info?.imageId} alt="" />
-                      )}
-                      <button>ADD</button>
-                    </div>
-                  </div>
-                ))
-            )
+          ? resMenu.map((item) => <MenuCard key={item.id} item={item} />)
           : resMenu.map((category, index) => (
-              <div key={index} className="food-list">
-                <div
-                  onClick={() => findCategory(index)}
-                  className="recommended"
-                >
-                  <h3>
-                    {category.card.card.title} (
-                    {category.card.card.itemCards.length})
-                  </h3>
-                  <i
-                    className={
-                      categories.includes(index)
-                        ? "bx bx-chevron-up"
-                        : "bx bx-chevron-down"
-                    }
-                  ></i>
-                </div>
-                {categories.includes(index)
-                  ? category?.card?.card?.itemCards?.map((item) => (
-                      <div key={item?.card?.info?.id} className="food-details">
-                        <div className="food-name">
-                          <span>
-                            {" "}
-                            <i
-                              style={
-                                item?.card?.info?.itemAttribute
-                                  .vegClassifier === "VEG"
-                                  ? { color: "green" }
-                                  : { color: "brown" }
-                              }
-                              className="bx bx-food-tag"
-                            ></i>
-                          </span>
-
-                          <h6>
-                            <div className="food-tag">
-                              <i
-                                style={
-                                  item?.card?.info?.ribbon.text
-                                    ? { color: "#ff7300" }
-                                    : { color: "white" }
-                                }
-                                className="bx bxs-star"
-                              ></i>
-                              {item?.card?.info?.ribbon.text}
-                            </div>
-                          </h6>
-                          <h4>{item?.card?.info?.name}</h4>
-                          <h5>
-                            ₹{" "}
-                            {item?.card?.info?.price / 100 ||
-                              item?.card?.info?.defaultPrice / 100}
-                          </h5>
-                          <p>
-                            {item?.card?.info?.description?.length > 50
-                              ? item?.card?.info?.description
-                                  .split(" ")
-                                  .slice(0, 10)
-                                  .join(" ") + "..."
-                              : item?.card?.info?.description}
-                          </p>
-                        </div>
-                        <div className="food-img">
-                          {item?.card?.info?.imageId && (
-                            <img
-                              src={CDN_URL + item?.card?.info?.imageId}
-                              alt=""
-                            />
-                          )}
-                          <button>ADD</button>
-                        </div>
-                      </div>
-                    ))
-                  : null}
-              </div>
+              <MenuCategory
+                key={category.id}
+                category={category}
+                index={index}
+              />
             ))}
       </div>
     </div>

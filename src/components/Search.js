@@ -29,7 +29,7 @@ const Search = () => {
     setListOfRestaurants(restaurants);
     setFilteredRestaurants(restaurants);
   };
-  return listOfRestaurant.length === 0  ? (
+  return listOfRestaurant.length === 0 ? (
     <ShimmerSearch />
   ) : (
     <>
