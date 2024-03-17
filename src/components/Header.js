@@ -1,14 +1,19 @@
 import { useState } from "react";
 import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [btn, setBtn] = useState("login");
+  const onlineStatus = useOnlineStatus()
   return (
     <div className="header">
       <div className="logo">
         <img src={LOGO_URL} alt="logo" />
+        <span>
+        <i style={onlineStatus ? {color : 'green'} : {color : 'brown'}}  class='bx bx-wifi-0'></i>
+        </span>
       </div>
       <div className={`nav-items ${showMenu ? "active" : "disabled"}`}>
         <ul>

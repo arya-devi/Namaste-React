@@ -1,4 +1,3 @@
-import { LOGO_URL } from "../utils/constants";
 const Footer = () => {
   return (
     <div className="footer-container">
@@ -6,7 +5,7 @@ const Footer = () => {
         <div className="logo-container">
           <div className="img-container">
             <i className="bx bxs-bowl-hot bx-tada"></i>
-            <img src={ LOGO_URL } alt="" />
+           <i>cookin</i>
           </div>
           <h5>© 2023 Bundl Technologies Pvt. Ltd</h5>
         </div>
