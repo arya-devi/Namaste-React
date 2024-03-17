@@ -541,6 +541,11 @@ p {
   width: 100px;
   border-radius: 50%;
 }
+/* .profile-img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+} */
 @media (max-width: 785px) {
   .header {
     height: 70px;

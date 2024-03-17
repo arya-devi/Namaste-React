@@ -2,8 +2,9 @@ import { useState } from "react";
 import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
-
+import image from "../../images/img.jpg"
 const Header = () => {
+
   const [showMenu, setShowMenu] = useState(false);
   const [btn, setBtn] = useState("login");
   const onlineStatus = useOnlineStatus()
@@ -43,6 +44,9 @@ const Header = () => {
               <i className="bx bxs-cart-alt"></i> Cart
             </Link>
           </li>
+          {/* <li>
+            <img className="profile-img" src={image} alt="" />
+          </li> */}
           <button
             className="btn-loginout"
             onClick={() => {

@@ -3,6 +3,7 @@ import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import OfflineImg from "./OfflineImg";
 
 const Body = () => {
   const [listOfRestaurant, setListOfRestaurants] = useState([]);
@@ -26,9 +27,15 @@ const Body = () => {
     setFilterfRestaurants(restaurants);
     // console.log(restaurants);
   };
+
   const onlineStatus = useOnlineStatus();
-  if (onlineStatus === false)
-    return <h1>You'r Offline Now Please Check The Internet Connection ! 👀</h1>;
+  if (!onlineStatus)
+    return (
+      <div>
+        <h1>You'r Offline Now Please Check The Internet Connection ! 👀</h1>
+        <OfflineImg />
+      </div>
+    );
 
   return listOfRestaurant.length === 0 && !search ? (
     <Shimmer />
@@ -48,7 +55,8 @@ const Body = () => {
               setListOfRestaurants(filteredList);
             }}
           />
-          <button className="search-res-btn"
+          <button
+            className="search-res-btn"
             onClick={() => {
               const filteredList = filterRestaurant.filter((res) =>
                 res.info.name.toLowerCase().includes(search.toLowerCase())
