@@ -17,6 +17,7 @@ const AppLayout = () => {
     </div>
   );
 };
+
 const Body = lazy(() => import("./components/Body"));
 const Help = lazy(() => import("./components/Help"));
 const RestaurantMenu = lazy(() => import("./components/RestaurantMenu"));

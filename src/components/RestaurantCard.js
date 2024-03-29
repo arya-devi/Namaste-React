@@ -13,7 +13,6 @@ const RestaurantCard = (props) => {
     areaName,
   } = resData.info;
   const { deliveryTime, lastMileTravel } = sla;
-  // const { header, subHeader } = aggregatedDiscountInfoV3;
   return (
     <div className="card-container">
       <img src={CDN_URL + cloudinaryImageId} alt="" />
@@ -53,5 +52,16 @@ const RestaurantCard = (props) => {
       </div>
     </div>
   );
+};
+
+export const withPromotedLabel = (RestaurantCard) => {
+  return (props) => {
+    return (
+      <div>
+        <h4 className="promoted-label">Pure Veg</h4>
+        <RestaurantCard {...props} />
+      </div>
+    );
+  };
 };
 export default RestaurantCard;

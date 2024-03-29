@@ -5,12 +5,6 @@ body {
   box-sizing: border-box;
   margin: 0px;
 }
-.logo span {
-  font-size: 70px;
-  right: 30px;
-  position: relative;
-}
-
 .body {
   width: 80%;
   margin: auto;
@@ -87,6 +81,9 @@ body {
   cursor: pointer;
   border-radius: 10px;
   transition: transform 0.6s;
+  position: relative;
+  top: 18px;
+  left: 10px;
 }
 .card-container img {
   width: 100%;
@@ -332,6 +329,11 @@ p {
 .logo-container h5 {
   font-size: 10px;
 }
+.logo span {
+  font-size: 70px;
+  right: 30px;
+  position: relative;
+}
 .img-container {
   display: flex;
   gap: 20px;
@@ -424,6 +426,9 @@ p {
   margin: 4px;
   color: rgba(87, 87, 87, 0.818);
   font-size: 12px;
+}
+.res-offers span {
+  color: sienna;
 }
 .offer-card {
   display: flex;
@@ -541,11 +546,15 @@ p {
   width: 100px;
   border-radius: 50%;
 }
-/* .profile-img{
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-} */
+.promoted-label {
+  position: absolute;
+  background: #05a913;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 5px;
+  width: 70px;
+  z-index: 1;
+}
 @media (max-width: 785px) {
   .header {
     height: 70px;

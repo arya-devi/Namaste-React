@@ -16,7 +16,7 @@ const RestaurentMenu = () => {
   useEffect(() => {
     if (resInfo) {
       const totalData =
-        resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
+        resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
       const totalMenu = totalData.filter((item) => item?.card?.card?.itemCards);
 
       setResMenu(totalMenu);
@@ -24,6 +24,7 @@ const RestaurentMenu = () => {
       console.log(totalMenu);
 
       console.log(resMenu);
+      console.log(resInfo);
     }
   }, [resInfo]);
 
@@ -38,12 +39,12 @@ const RestaurentMenu = () => {
     cuisines,
     name,
     totalRatingsString,
-  } = resInfo?.cards[0]?.card?.card?.info;
+  } = resInfo?.cards[2]?.card?.card?.info;
   const { slaString, lastMileTravelString } =
-    resInfo?.cards[0]?.card?.card?.info?.sla;
+    resInfo?.cards[2]?.card?.card?.info?.sla;
 
   const offers =
-    resInfo?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.offers;
+    resInfo?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.offers;
 
   // console.log(offers);
 
@@ -86,8 +87,8 @@ const RestaurentMenu = () => {
         <div className="offer-card">
           {offers.map((offer, index) => (
             <div key={index} className="res-offers">
-              <h4>
-                <i className="bx bxs-offer bx-flashing"></i>
+              <h4><span> <i className="bx bxs-offer bx-flashing"></i></span>
+               
                 {offer.info.header}
               </h4>
               <h5>
