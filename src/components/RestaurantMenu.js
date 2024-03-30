@@ -8,7 +8,6 @@ import MenuCategory from "./MenuCategory";
 const RestaurentMenu = () => {
   const [vegOnly, setVegOnly] = useState(false);
   const [resMenu, setResMenu] = useState([]);
-  const [filteredMenu, setFilteredMenu] = useState([]);
 
   const { id } = useParams();
   const resInfo = useRestaurantData(id);
@@ -20,7 +19,6 @@ const RestaurentMenu = () => {
       const totalMenu = totalData.filter((item) => item?.card?.card?.itemCards);
 
       setResMenu(totalMenu);
-      setFilteredMenu(totalMenu);
       console.log(totalMenu);
 
       console.log(resMenu);
@@ -87,8 +85,12 @@ const RestaurentMenu = () => {
         <div className="offer-card">
           {offers.map((offer, index) => (
             <div key={index} className="res-offers">
-              <h4><span> <i className="bx bxs-offer bx-flashing"></i></span>
-               
+              <h4>
+                <span>
+                  {" "}
+                  <i className="bx bxs-offer bx-flashing"></i>
+                </span>
+
                 {offer.info.header}
               </h4>
               <h5>
@@ -101,7 +103,6 @@ const RestaurentMenu = () => {
       <div className="menu-details">
         <div className="veg-only">
           <h4>Veg only</h4>
-          {/* {vegOnly ? resMenu.length + "items":  <h4>Veg only</h4>} */}
           <div className={`veg-only-btn ${vegOnly ? "active" : ""}`}>
             <i
               onClick={() => setVegOnly((prev) => !prev)}
