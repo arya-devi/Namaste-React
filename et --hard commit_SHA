@@ -1,0 +1,52 @@
+[33mba9d765[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m HEAD@{0}: reset: moving to HEAD~1
+[33m3033a34[m[33m ([m[1;31morigin/main[m[33m)[m HEAD@{1}: commit: accordion MenuCard and MenuCategory component collapse featurre,now t…
+[33mba9d765[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m HEAD@{2}: commit: Api issue solved and how to create a higher order component and that takes a component and return that enhanced version
+[33md54bfcf[m HEAD@{3}: commit: How to distribute my application into smaller chunks using lazy function and use Suspense which is a component that helps to prevent component suspended error and used fallback which is like shimmer UI
+[33m2c52b43[m HEAD@{4}: commit: Onlinestatus hook created and the footer component has been modified
+[33m9f9b68c[m HEAD@{5}: commit: created custom hook and optimised the code
+[33m4ba703a[m HEAD@{6}: commit: use of componentwillunmount and how to achive that in useEffect
+[33mdd7ce9f[m HEAD@{7}: commit: if we want to do anything on specific state changes and multiple state changes how will be modify our componentDidUpdate
+[33me370dcf[m HEAD@{8}: commit: componentWillUnmount will work when the component changes
+[33mb321403[m HEAD@{9}: commit: how we can make Api call inside class component,Git Hub user Api Fetched
+[33m8467e70[m HEAD@{10}: commit: how lifecycle methods are called when there are multiple children
+[33m6279f61[m HEAD@{11}: commit: Life Cycle of class based components , how the component is mounted on to the webpage-working of parent and child component
+[33mda79ccf[m HEAD@{12}: commit: how we can update state variable by using this.setState,we will pass an object inside setState and this object will contain the updated value of the state variable.whenever the state variable is update the react will rerender the component
+[33m55f0cf9[m HEAD@{13}: commit: how to create single and multiple state variable inside class component with using this.state,whenever we create an instance of a class the constructor is called, it is the best place to create state variable
+[33m3158402[m HEAD@{14}: commit: how we can pass and receive props in class components using constructor method and super props , this keyword helps to use the props inside the render function
+[33m359bb37[m HEAD@{15}: commit: how to create a class component using React.Component class and render method
+[33m161ed08[m HEAD@{16}: commit: filtered all veg categories
+[33mc1e3165[m HEAD@{17}: commit: all categories are added
+[33m8711484[m HEAD@{18}: commit: UseEffect fetch cors-error extention added optional chaining used , react-router-dom,Footer,search filter,react router dom child and rout link difference between Link and a href
+[33m008b9dc[m HEAD@{19}: commit: lets get hooked - virtual dom and react fibre knowledge
+[33m1929288[m HEAD@{20}: commit: All coomponents are moved to separate file
+[33md107aed[m HEAD@{21}: commit: Added restaurents via swiggi api docs
+[33m40d0c1b[m HEAD@{22}: commit: started to making the food delivery app - header,card container are done
+[33m1735a1b[m HEAD@{23}: commit: how we can render or execute component in three ways
+[33m7608ab2[m HEAD@{24}: commit: what about safty when using JSX
+[33m76de336[m HEAD@{25}: commit: we can pass component to component ,element to element element to component ,component to element,and we can write any javascript code inside jsx by {}
+[33me4c8070[m HEAD@{26}: commit: how to pass a component to another component and use it , component composition
+[33m216baea[m HEAD@{27}: commit: how to convert a react element to react component and how to render a react component
+[33mfac061a[m HEAD@{28}: commit: react component creation,what is react component,syntax
+[33m4a2282b[m HEAD@{29}: commit: className,jsx camelcase rule , multiple line of code need paranthisis ()
+[33m82b2ce2[m HEAD@{30}: commit: At the end of the day jsx becomes React.createElement
+[33m22f098c[m HEAD@{31}: commit: deleted dist and parcel-cache
+[33maa53b5f[m HEAD@{32}: commit: JSX intro , Transpiling , Parcel , Babel , Js Engine
+[33m96d9f1f[m HEAD@{33}: reset: moving to HEAD~2
+[33m9984e56[m HEAD@{34}: commit (merge): createElement , createRoot , render methods working in react with localhost
+[33m894ba43[m HEAD@{35}: commit: jsx intro , transpiling , parcel , Babel , js engine
+[33m96d9f1f[m HEAD@{36}: commit: createElement , createRoot , render methods working in react with localhost
+[33mf139951[m HEAD@{37}: commit: instead of using npm parcel index.html for build project added a npm script in package.json for both development and production by following industry standered npm run start /npm start , npm run build
+[33mf181e04[m HEAD@{38}: commit: npx build for production comes in dist folder , browserlist added in pacage.json
+[33mfebee07[m HEAD@{39}: commit: removed CDN added react and react-dom using npm,use of npx,created server using npx parcel,how parcelmakes fast application
+[33mac85b9f[m HEAD@{40}: commit: npm initialized,package.json and use of that, ^(caret) and ~(tilde) use cases are different,npm install -D parcel and use of _D , package-lock.json and use node modules,git ignore
+[33m0adc91c[m HEAD@{41}: commit: more deep about code executing and how render method works - render is replaced the rect accessable part not appending
+[33m4f5b483[m HEAD@{42}: commit: more complex html nested elements, with siblings code looks ugly
+[33m014f474[m HEAD@{43}: commit: how do we create siblings html elements in react
+[33ma7e7226[m HEAD@{44}: commit: how we create nested html elements using react
+[33m920ef49[m HEAD@{45}: commit: Realized what happen when createElement and render method works
+[33mf046c04[m HEAD@{46}: commit: add react to another javascript file,added attributes on empty objects and added css
+[33m66bceba[m HEAD@{47}: commit: hello world from react using React.createElement,ReactDOM.createroot and render
+[33md173ba7[m HEAD@{48}: commit: Added react and reactDom through CDN links
+[33m2d1cbb0[m HEAD@{49}: commit: hello world from javascript
+[33mb83119a[m HEAD@{50}: Branch: renamed refs/heads/master to refs/heads/main
+[33mb83119a[m HEAD@{52}: commit (initial): hello world
