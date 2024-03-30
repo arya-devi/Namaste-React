@@ -4,6 +4,7 @@ import { CDN_URL } from "../utils/constants";
 
 const MenuCardDetails = (props) => {
     const {item} = props;
+    
   return (
     <div key={item?.card?.info?.id} className="food-details">
             <div className="food-name">

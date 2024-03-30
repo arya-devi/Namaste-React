@@ -2,8 +2,8 @@ import React from "react";
 import MenuCardDetails from "./MenuCardDetails";
 
 const MenuCard = (props) => {
-  const { item } = props;
-  console.log(item);
+  const { item,dummyData } = props;
+  console.log(dummyData);  
   const filteredItems = item.card?.card?.itemCards.filter(
     (item) => item.card?.info?.itemAttribute?.vegClassifier === "VEG"
   );
