@@ -13,7 +13,7 @@ const Header = () => {
       <div className="logo">
         <img src={LOGO_URL} alt="logo" />
         <span>
-        <i style={onlineStatus ? {color : 'green'} : {color : 'brown'}}  class='bx bx-wifi-0'></i>
+        <i style={onlineStatus ? {color : 'green'} : {color : 'brown'}}  className='bx bx-wifi-0'></i>
         </span>
       </div>
       <div className={`nav-items ${showMenu ? "active" : "disabled"}`}>
