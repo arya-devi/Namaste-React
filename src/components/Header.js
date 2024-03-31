@@ -8,7 +8,6 @@ const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [btn, setBtn] = useState("login");
   const onlineStatus = useOnlineStatus();
-  const { loggedUser } = useContext(UserContext);
   return (
     <div className="header">
       <div className="logo">
@@ -48,7 +47,6 @@ const Header = () => {
               <i className="bx bxs-cart-alt"></i> Cart
             </Link>
           </li>
-          <h4>{loggedUser}</h4>
           {/* <li>
             <img className="profile-img" src={image} alt="" />
           </li> */}
