@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import MenuCard from "./MenuCard";
 
 const MenuCategory = (props) => {
-  const { category,index,show,setShowIndex,dummyData } = props;
+  const { category,index,show,setShowIndex } = props;
 
   const handleClick = () => {
     setShowIndex()
@@ -24,7 +24,7 @@ const MenuCategory = (props) => {
      
       {show &&
          category?.card?.card?.itemCards?.map((item) => (
-            <MenuCard key={item.card.info.id} item={item} dummyData={dummyData}/>  //props drilling
+            <MenuCard key={item.card.info.id} item={item} /> 
           ))
          }
     </div>

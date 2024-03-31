@@ -12,7 +12,6 @@ const RestaurentMenu = () => {
 
   const { id } = useParams();
   const resInfo = useRestaurantData(id);
-  const dummyData = "dummydata"
 
   useEffect(() => {
     if (resInfo) {
@@ -124,8 +123,6 @@ const RestaurentMenu = () => {
                 setShowIndex={() =>
                   setShowIndex(index === showIndex ? null : index)
                 }
-                //props drilling
-                dummyData={dummyData}
               />
             ))}
       </div>
