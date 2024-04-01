@@ -9,27 +9,31 @@ import Search from "./components/Search";
 import Footer from "./components/Footer";
 import { UserContext } from "./utils/globalContext";
 
-//How to update the value of Context via our root component
+// How to update the value of Context via our root component
 
 const AppLayout = () => {
-  const [userName,setUserName] = useState()
+  const [userName, setUserName] = useState();
   //authentication
   useEffect(() => {
     //make an api call and send the user name
     const data = {
       name: "Arya",
     };
-    setUserName(data.name)
-  },[])
-  
+    setUserName(data.name);
+  }, []);
+
   return (
-    <UserContext.Provider value={{loggedUser:userName}}>  //how to pass the context information to the app for that use Context Provider.We can use Context Provider to the whole app and a specific portion,if uses the specific portion it only changes that portion otherwise it will be default value
-      <div className="app">
+    <div className="app">
+      <UserContext.Provider value={{ loggedUser: userName, setUserName }}>
+        {" "}
+        // here we are passing the setState ability of user name to context api
+        …and we are using that in our header compoent , onchange of username the
+        username will change
         <Header />
         <Outlet />
         <Footer />
-      </div>
-    </UserContext.Provider>
+      </UserContext.Provider>
+    </div>
   );
 };
 

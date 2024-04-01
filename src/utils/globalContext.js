@@ -2,7 +2,7 @@
 
 import { createContext } from "react";
 export const UserContext = createContext({
-  loggedUser: "Default User",
+  loggedUser: "Search",
 });
 
 //  A data is present somewhere and we want to access  it somewhere else then how to do that? for that react giving us a superpower known as Reacact Context . while we use context we can just avois props drilling
