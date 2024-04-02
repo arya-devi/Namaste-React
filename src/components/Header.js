@@ -4,11 +4,17 @@ import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import image from "../../images/img.jpg";
 import { UserContext } from "../utils/globalContext";
+import { useSelector } from "react-redux";
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [btn, setBtn] = useState("login");
   const onlineStatus = useOnlineStatus();
   const { loggedUser, setUserName } = useContext(UserContext);
+
+  //subscibing to the store using a selector
+
+  const cartItems = useSelector((store) => store.cart.items);
+  console.log(cartItems);
 
   return (
     <div className="header">
@@ -56,7 +62,7 @@ const Header = () => {
           </li>
           <li>
             <Link to={"/cart"} className="no-underline">
-              <i className="bx bxs-cart-alt"></i> Cart
+              <i className="bx bxs-cart-alt"></i> Cart ({cartItems.length})
             </Link>
           </li>
           <li>{loggedUser}</li>

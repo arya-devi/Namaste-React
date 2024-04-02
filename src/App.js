@@ -8,6 +8,8 @@ import Error from "./components/Error";
 import Search from "./components/Search";
 import Footer from "./components/Footer";
 import { UserContext } from "./utils/globalContext";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
 
 // How to update the value of Context via our root component
 
@@ -24,15 +26,13 @@ const AppLayout = () => {
 
   return (
     <div className="app">
+      <Provider store={appStore}>
       <UserContext.Provider value={{ loggedUser: userName, setUserName }}>
-        {" "}
-        // here we are passing the setState ability of user name to context api
-        …and we are using that in our header compoent , onchange of username the
-        username will change
         <Header />
         <Outlet />
         <Footer />
       </UserContext.Provider>
+      </Provider>
     </div>
   );
 };
